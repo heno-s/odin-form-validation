@@ -49,6 +49,16 @@ form {
     display: flex;
     gap: 5px;
     padding: 5px 10px;
+    justify-content: space-between;
+}
+
+.input-wrapper img {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.input-wrapper :where(input, select) {
+    flex: 1;
 }
 
 label {
