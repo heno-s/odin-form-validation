@@ -45,7 +45,12 @@
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <div class="input-wrapper">
-                        <input type="password" id="password" />
+                        <input
+                            type="password"
+                            id="password"
+                            minlength="6"
+                            pattern="[A-Z$@!&()]"
+                        />
                     </div>
                 </div>
                 <span class="error"></span>
