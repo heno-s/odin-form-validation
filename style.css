@@ -5,3 +5,101 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #333;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+form {
+    background-color: #737373;
+    padding: 20px 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px 5px;
+}
+
+.form-control {
+    background-color: #22222288;
+    border-radius: 20px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-groups {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-wrapper {
+    background-color: #00000033;
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+option {
+    background-color: #000000aa;
+}
+
+.error {
+    background-color: #da5757;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.form-control:has(.interacted:invalid),
+.input-wrapper:has(.interacted:invalid) {
+    border: 2px solid red;
+}
+
+.form-control:has(.interacted:invalid) .error {
+    display: block;
+}
+
+.submit {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-color: #272727;
+    padding: 0.6em 2em;
+    align-self: center;
+    margin-top: 16px;
+}
