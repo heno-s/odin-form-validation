@@ -53,6 +53,7 @@ form {
 }
 
 .input-wrapper img {
+    cursor: pointer;
     width: 20px;
     aspect-ratio: 1;
 }
@@ -95,6 +96,11 @@ option {
 .form-control:has(.interacted:invalid),
 .input-wrapper:has(.interacted:invalid) {
     border: 2px solid red;
+}
+
+.form-control:has(.interacted:valid),
+.input-wrapper:has(.interacted:valid) {
+    border: 2px solid green;
 }
 
 .form-control:has(.interacted:invalid) .error {
