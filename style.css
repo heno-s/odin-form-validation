@@ -119,3 +119,14 @@ option {
     align-self: center;
     margin-top: 16px;
 }
+
+.high-five {
+    cursor: pointer;
+    font-size: 3rem;
+    color: yellow;
+    align-self: center;
+}
+
+.hide {
+    display: none;
+}

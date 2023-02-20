@@ -4,6 +4,7 @@ const country = form.country;
 const zip = form.zip;
 const pass = form.password;
 const confirm = form["password-confirm"];
+const highFive = form.querySelector(".high-five");
 
 function getErrorElement(input) {
     return input.closest(".form-control").querySelector(".error");
@@ -105,10 +106,10 @@ form.addEventListener("submit", (evt) => {
     validate.pass();
     confirm.classList.add("interacted");
     validate.confirm();
-    // const isValidForm = form.checkValidity();
+    const isValidForm = form.checkValidity();
     if (isValidForm) {
-        /* show high five */
-    } else {
+        form["submit-button"].classList.add("hide");
+        highFive.classList.remove("hide");
     }
 });
 
@@ -137,3 +138,17 @@ pass.addEventListener("input", (evt) => {
     validate.confirm();
 });
 confirm.addEventListener("input", validate.confirm);
+
+highFive.addEventListener("click", resetForm);
+
+function resetForm() {
+    form.reset();
+    form["submit-button"].classList.remove("hide");
+
+    email.classList.remove("interacted");
+    zip.classList.remove("interacted");
+    pass.classList.remove("interacted");
+    confirm.classList.remove("interacted");
+
+    highFive.classList.add("hide");
+}
