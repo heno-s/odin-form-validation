@@ -113,6 +113,27 @@ form.addEventListener("submit", (evt) => {
     }
 });
 
+form.addEventListener("click", (evt) => {
+    const t = evt.target;
+    if (t.nodeName !== "IMG") {
+        return;
+    }
+    const reveal = t.dataset.reveal;
+    if (reveal === "password") {
+        if (pass.type === "text") {
+            pass.type = "password";
+        } else {
+            pass.type = "text";
+        }
+    } else if (reveal === "confirm") {
+        if (confirm.type === "text") {
+            confirm.type = "password";
+        } else {
+            confirm.type = "text";
+        }
+    }
+});
+
 email.addEventListener("focusout", (evt) => {
     email.classList.add("interacted");
     validate.email();
